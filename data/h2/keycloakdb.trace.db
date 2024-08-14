@@ -1,0 +1,593 @@
+2024-07-04 13:22:34.977973+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MIGRATION_MODEL" not found (this database is empty); SQL statement:
+SELECT ID, VERSION FROM MIGRATION_MODEL ORDER BY UPDATE_TIME DESC [42104-224]
+2024-07-04 13:22:36.995178+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOG" not found (this database is empty); SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG [42104-224]
+2024-07-04 13:22:37.191086+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOGLOCK" not found (this database is empty); SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42104-224]
+2024-07-04 13:22:37.220372+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOG" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG [42102-224]
+2024-08-07 14:29:08.283336+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_ATTRIBUTE"; SQL statement:
+delete from USER_ATTRIBUTE where USER_ID=? and NAME=? [50200-224]
+2024-08-07 14:30:21.354657+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_ATTRIBUTE"; SQL statement:
+delete from USER_ATTRIBUTE where USER_ID=? and NAME=? [50200-224]
+2024-08-07 15:35:02.358192+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-07 15:35:02.421649+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-07 16:22:59.694630+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-07 16:22:59.694630+05:30 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-07 16:23:35.869855+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-07 16:42:25.742105+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-07 17:34:22.842341+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+insert into USER_ENTITY (CREATED_TIMESTAMP,EMAIL,EMAIL_CONSTRAINT,EMAIL_VERIFIED,ENABLED,FEDERATION_LINK,FIRST_NAME,LAST_NAME,NOT_BEFORE,REALM_ID,SERVICE_ACCOUNT_CLIENT_LINK,USERNAME,ID) values (?,?,?,?,?,?,?,?,?,?,?,?,?) [50200-224]
+2024-08-07 17:34:22.845853+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Timeout trying to lock table {0}; SQL statement:
+insert into USER_ENTITY (CREATED_TIMESTAMP,EMAIL,EMAIL_CONSTRAINT,EMAIL_VERIFIED,ENABLED,FEDERATION_LINK,FIRST_NAME,LAST_NAME,NOT_BEFORE,REALM_ID,SERVICE_ACCOUNT_CLIENT_LINK,USERNAME,ID) values (?,?,?,?,?,?,?,?,?,?,?,?,?) [50200-224]
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1282)
+	at io.agroal.pool.wrapper.StatementWrapper.executeBatch(StatementWrapper.java:340)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.lambda$performExecution$2(BatchImpl.java:279)
+	at org.hibernate.engine.jdbc.mutation.internal.PreparedStatementGroupSingleTable.forEachStatement(PreparedStatementGroupSingleTable.java:59)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.performExecution(BatchImpl.java:264)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.execute(BatchImpl.java:242)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.executeBatch(JdbcCoordinatorImpl.java:188)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:662)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:363)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1393)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.keycloak.connections.jpa.PersistenceExceptionConverter.invoke(PersistenceExceptionConverter.java:66)
+	at jdk.proxy2/jdk.proxy2.$Proxy60.flush(Unknown Source)
+	at org.keycloak.models.jpa.JpaUserProvider.addUser(JpaUserProvider.java:120)
+	at org.keycloak.models.jpa.JpaUserProvider.addUser(JpaUserProvider.java:143)
+	at org.keycloak.storage.UserStorageManager.lambda$addUser$17(UserStorageManager.java:357)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.keycloak.storage.UserStorageManager.addUser(UserStorageManager.java:357)
+	at org.keycloak.models.cache.infinispan.UserCacheSession.addUser(UserCacheSession.java:835)
+	at org.keycloak.userprofile.DeclarativeUserProfileProvider$1.apply(DeclarativeUserProfileProvider.java:161)
+	at org.keycloak.userprofile.DeclarativeUserProfileProvider$1.apply(DeclarativeUserProfileProvider.java:148)
+	at org.keycloak.userprofile.DefaultUserProfile.create(DefaultUserProfile.java:96)
+	at org.keycloak.services.resources.admin.UsersResource.createUser(UsersResource.java:151)
+	at org.keycloak.services.resources.admin.UsersResource$quarkusrestinvoker$createUser_49ad02a153eab6ba1571548b97a4fecbdc7a7465.invoke(Unknown Source)
+	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
+	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
+	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:582)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+insert into USER_ENTITY (CREATED_TIMESTAMP,EMAIL,EMAIL_CONSTRAINT,EMAIL_VERIFIED,ENABLED,FEDERATION_LINK,FIRST_NAME,LAST_NAME,NOT_BEFORE,REALM_ID,SERVICE_ACCOUNT_CLIENT_LINK,USERNAME,ID) values (?,?,?,?,?,?,?,?,?,?,?,?,?) [50200-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:572)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.command.Command.filterConcurrentUpdate(Command.java:330)
+	at org.h2.command.Command.executeUpdate(Command.java:262)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatchElement(JdbcPreparedStatement.java:1330)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1276)
+	at io.agroal.pool.wrapper.StatementWrapper.executeBatch(StatementWrapper.java:340)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.lambda$performExecution$2(BatchImpl.java:279)
+	at org.hibernate.engine.jdbc.mutation.internal.PreparedStatementGroupSingleTable.forEachStatement(PreparedStatementGroupSingleTable.java:59)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.performExecution(BatchImpl.java:264)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.execute(BatchImpl.java:242)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.executeBatch(JdbcCoordinatorImpl.java:188)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:662)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:363)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1393)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.keycloak.connections.jpa.PersistenceExceptionConverter.invoke(PersistenceExceptionConverter.java:66)
+	at jdk.proxy2/jdk.proxy2.$Proxy60.flush(Unknown Source)
+	at org.keycloak.models.jpa.JpaUserProvider.addUser(JpaUserProvider.java:120)
+	at org.keycloak.models.jpa.JpaUserProvider.addUser(JpaUserProvider.java:143)
+	at org.keycloak.storage.UserStorageManager.lambda$addUser$17(UserStorageManager.java:357)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.keycloak.storage.UserStorageManager.addUser(UserStorageManager.java:357)
+	at org.keycloak.models.cache.infinispan.UserCacheSession.addUser(UserCacheSession.java:835)
+	at org.keycloak.userprofile.DeclarativeUserProfileProvider$1.apply(DeclarativeUserProfileProvider.java:161)
+	at org.keycloak.userprofile.DeclarativeUserProfileProvider$1.apply(DeclarativeUserProfileProvider.java:148)
+	at org.keycloak.userprofile.DefaultUserProfile.create(DefaultUserProfile.java:96)
+	at org.keycloak.services.resources.admin.UsersResource.createUser(UsersResource.java:151)
+	at org.keycloak.services.resources.admin.UsersResource$quarkusrestinvoker$createUser_49ad02a153eab6ba1571548b97a4fecbdc7a7465.invoke(Unknown Source)
+	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
+	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
+	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:582)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.message.DbException: Concurrent update in table "USER_ENTITY": another transaction has updated or deleted the same row [90131-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:225)
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:184)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:519)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:174)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	... 43 more
+Caused by: org.h2.jdbc.JdbcSQLTransientException: Concurrent update in table "USER_ENTITY": another transaction has updated or deleted the same row [90131-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:694)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 53 more
+2024-08-08 10:30:22.054222+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-08 10:33:26.433662+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+insert into USER_GROUP_MEMBERSHIP (GROUP_ID,USER_ID) values (?,?) [50200-224]
+2024-08-08 10:33:26.434158+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Timeout trying to lock table {0}; SQL statement:
+insert into USER_GROUP_MEMBERSHIP (GROUP_ID,USER_ID) values (?,?) [50200-224]
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1282)
+	at io.agroal.pool.wrapper.StatementWrapper.executeBatch(StatementWrapper.java:340)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.lambda$performExecution$2(BatchImpl.java:279)
+	at org.hibernate.engine.jdbc.mutation.internal.PreparedStatementGroupSingleTable.forEachStatement(PreparedStatementGroupSingleTable.java:59)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.performExecution(BatchImpl.java:264)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.execute(BatchImpl.java:242)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.executeBatch(JdbcCoordinatorImpl.java:188)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:662)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:363)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1393)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.keycloak.connections.jpa.PersistenceExceptionConverter.invoke(PersistenceExceptionConverter.java:66)
+	at jdk.proxy2/jdk.proxy2.$Proxy60.flush(Unknown Source)
+	at org.keycloak.models.jpa.UserAdapter.joinGroupImpl(UserAdapter.java:427)
+	at org.keycloak.models.jpa.UserAdapter.joinGroup(UserAdapter.java:418)
+	at org.keycloak.models.cache.infinispan.UserAdapter.joinGroup(UserAdapter.java:437)
+	at org.keycloak.services.resources.admin.UserResource.joinGroup(UserResource.java:1054)
+	at org.keycloak.services.resources.admin.UserResource$quarkusrestinvoker$joinGroup_0f1a9c6748fb254fb63d061c5ef823fe7906a7dc.invoke(Unknown Source)
+	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
+	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
+	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:582)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+insert into USER_GROUP_MEMBERSHIP (GROUP_ID,USER_ID) values (?,?) [50200-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:572)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.command.Command.filterConcurrentUpdate(Command.java:330)
+	at org.h2.command.Command.executeUpdate(Command.java:262)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatchElement(JdbcPreparedStatement.java:1330)
+	at org.h2.jdbc.JdbcPreparedStatement.executeBatch(JdbcPreparedStatement.java:1276)
+	at io.agroal.pool.wrapper.StatementWrapper.executeBatch(StatementWrapper.java:340)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.lambda$performExecution$2(BatchImpl.java:279)
+	at org.hibernate.engine.jdbc.mutation.internal.PreparedStatementGroupSingleTable.forEachStatement(PreparedStatementGroupSingleTable.java:59)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.performExecution(BatchImpl.java:264)
+	at org.hibernate.engine.jdbc.batch.internal.BatchImpl.execute(BatchImpl.java:242)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.executeBatch(JdbcCoordinatorImpl.java:188)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:662)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:363)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1393)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.keycloak.connections.jpa.PersistenceExceptionConverter.invoke(PersistenceExceptionConverter.java:66)
+	at jdk.proxy2/jdk.proxy2.$Proxy60.flush(Unknown Source)
+	at org.keycloak.models.jpa.UserAdapter.joinGroupImpl(UserAdapter.java:427)
+	at org.keycloak.models.jpa.UserAdapter.joinGroup(UserAdapter.java:418)
+	at org.keycloak.models.cache.infinispan.UserAdapter.joinGroup(UserAdapter.java:437)
+	at org.keycloak.services.resources.admin.UserResource.joinGroup(UserResource.java:1054)
+	at org.keycloak.services.resources.admin.UserResource$quarkusrestinvoker$joinGroup_0f1a9c6748fb254fb63d061c5ef823fe7906a7dc.invoke(Unknown Source)
+	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
+	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
+	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:582)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.message.DbException: Concurrent update in table "USER_GROUP_MEMBERSHIP": another transaction has updated or deleted the same row [90131-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:225)
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:184)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:519)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:174)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	... 37 more
+Caused by: org.h2.jdbc.JdbcSQLTransientException: Concurrent update in table "USER_GROUP_MEMBERSHIP": another transaction has updated or deleted the same row [90131-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:694)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 47 more
+2024-08-08 11:41:35.460591+05:30 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-08 11:41:35.460592+05:30 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-08 11:41:35.460592+05:30 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-08 11:43:09.442493+05:30 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-08 11:43:09.444810+05:30 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-08 11:43:09.444810+05:30 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-08 12:44:34.238367+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USER_GROUP_MEMBERSHIP"; SQL statement:
+select ugme1_0.GROUP_ID,ugme1_0.USER_ID from USER_GROUP_MEMBERSHIP ugme1_0 where ugme1_0.USER_ID=? and ugme1_0.GROUP_ID=? for update [50200-224]
+2024-08-09 11:47:18.198897+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1425)
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:465)
+	at io.agroal.pool.wrapper.ConnectionWrapper.getAutoCommit(ConnectionWrapper.java:177)
+	at liquibase.database.jvm.JdbcConnection.commit(JdbcConnection.java:246)
+	at liquibase.database.AbstractJdbcDatabase.commit(AbstractJdbcDatabase.java:1184)
+	at org.keycloak.connections.jpa.updater.liquibase.lock.CustomLockService.releaseLock(CustomLockService.java:271)
+	at org.keycloak.connections.jpa.updater.liquibase.lock.LiquibaseDBLockProvider.lambda$releaseLock$3(LiquibaseDBLockProvider.java:133)
+	at org.keycloak.models.utils.KeycloakModelUtils.suspendJtaTransaction(KeycloakModelUtils.java:1055)
+	at org.keycloak.connections.jpa.updater.liquibase.lock.LiquibaseDBLockProvider.releaseLock(LiquibaseDBLockProvider.java:128)
+	at org.keycloak.services.resources.KeycloakApplication$1.run(KeycloakApplication.java:105)
+	at org.keycloak.models.utils.KeycloakModelUtils.lambda$runJobInTransaction$1(KeycloakModelUtils.java:263)
+	at org.keycloak.models.utils.KeycloakModelUtils.runJobInTransactionWithResult(KeycloakModelUtils.java:386)
+	at org.keycloak.models.utils.KeycloakModelUtils.runJobInTransaction(KeycloakModelUtils.java:262)
+	at org.keycloak.services.resources.KeycloakApplication.startup(KeycloakApplication.java:95)
+	at org.keycloak.quarkus.runtime.integration.jaxrs.QuarkusKeycloakApplication.onStartupEvent(QuarkusKeycloakApplication.java:56)
+	at org.keycloak.quarkus.runtime.integration.jaxrs.QuarkusKeycloakApplication_Observer_onStartupEvent_GNZ8m5QenZ9h9VNelo7awjUZFDE.notify(Unknown Source)
+	at io.quarkus.arc.impl.EventImpl$Notifier.notifyObservers(EventImpl.java:346)
+	at io.quarkus.arc.impl.EventImpl$Notifier.notify(EventImpl.java:328)
+	at io.quarkus.arc.impl.EventImpl.fire(EventImpl.java:82)
+	at io.quarkus.arc.runtime.ArcRecorder.fireLifecycleEvent(ArcRecorder.java:155)
+	at io.quarkus.arc.runtime.ArcRecorder.handleLifecycleEvents(ArcRecorder.java:106)
+	at io.quarkus.deployment.steps.LifecycleEventsBuildStep$startupEvent1144526294.deploy_0(Unknown Source)
+	at io.quarkus.deployment.steps.LifecycleEventsBuildStep$startupEvent1144526294.deploy(Unknown Source)
+	at io.quarkus.runner.ApplicationImpl.doStart(Unknown Source)
+	at io.quarkus.runtime.Application.start(Application.java:101)
+	at io.quarkus.runtime.ApplicationLifecycleManager.run(ApplicationLifecycleManager.java:111)
+	at io.quarkus.runtime.Quarkus.run(Quarkus.java:71)
+	at org.keycloak.quarkus.runtime.KeycloakMain.start(KeycloakMain.java:139)
+	at org.keycloak.quarkus.runtime.cli.command.AbstractStartCommand.run(AbstractStartCommand.java:42)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2026)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2461)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2453)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2415)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2273)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2417)
+	at picocli.CommandLine.execute(CommandLine.java:2170)
+	at org.keycloak.quarkus.runtime.cli.Picocli.parseAndRun(Picocli.java:140)
+	at org.keycloak.quarkus.runtime.KeycloakMain.main(KeycloakMain.java:99)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.quarkus.bootstrap.runner.QuarkusEntryPoint.doRun(QuarkusEntryPoint.java:62)
+	at io.quarkus.bootstrap.runner.QuarkusEntryPoint.main(QuarkusEntryPoint.java:33)
+2024-08-09 11:47:18.213158+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1425)
+	at org.h2.jdbc.JdbcConnection.setAutoCommit(JdbcConnection.java:437)
+	at io.agroal.pool.ConnectionHandler.resetConnection(ConnectionHandler.java:132)
+	at io.agroal.pool.ConnectionPool.returnConnectionHandler(ConnectionPool.java:436)
+	at io.agroal.pool.ConnectionHandler.transactionEnd(ConnectionHandler.java:368)
+	at io.agroal.pool.ConnectionHandler.onConnectionWrapperClose(ConnectionHandler.java:111)
+	at io.agroal.pool.wrapper.ConnectionWrapper.close(ConnectionWrapper.java:137)
+	at org.keycloak.connections.jpa.updater.liquibase.lock.LiquibaseDBLockProvider.safeCloseConnection(LiquibaseDBLockProvider.java:186)
+	at org.keycloak.connections.jpa.updater.liquibase.lock.LiquibaseDBLockProvider.lambda$close$5(LiquibaseDBLockProvider.java:168)
+	at org.keycloak.models.utils.KeycloakModelUtils.suspendJtaTransaction(KeycloakModelUtils.java:1055)
+	at org.keycloak.connections.jpa.updater.liquibase.lock.LiquibaseDBLockProvider.close(LiquibaseDBLockProvider.java:167)
+	at org.keycloak.services.DefaultKeycloakSession.lambda$close$2(DefaultKeycloakSession.java:379)
+	at java.base/java.util.HashMap$Values.forEach(HashMap.java:1065)
+	at org.keycloak.services.DefaultKeycloakSession.close(DefaultKeycloakSession.java:385)
+	at org.keycloak.models.utils.KeycloakModelUtils.runJobInTransactionWithResult(KeycloakModelUtils.java:381)
+	at org.keycloak.models.utils.KeycloakModelUtils.runJobInTransaction(KeycloakModelUtils.java:262)
+	at org.keycloak.services.resources.KeycloakApplication.startup(KeycloakApplication.java:95)
+	at org.keycloak.quarkus.runtime.integration.jaxrs.QuarkusKeycloakApplication.onStartupEvent(QuarkusKeycloakApplication.java:56)
+	at org.keycloak.quarkus.runtime.integration.jaxrs.QuarkusKeycloakApplication_Observer_onStartupEvent_GNZ8m5QenZ9h9VNelo7awjUZFDE.notify(Unknown Source)
+	at io.quarkus.arc.impl.EventImpl$Notifier.notifyObservers(EventImpl.java:346)
+	at io.quarkus.arc.impl.EventImpl$Notifier.notify(EventImpl.java:328)
+	at io.quarkus.arc.impl.EventImpl.fire(EventImpl.java:82)
+	at io.quarkus.arc.runtime.ArcRecorder.fireLifecycleEvent(ArcRecorder.java:155)
+	at io.quarkus.arc.runtime.ArcRecorder.handleLifecycleEvents(ArcRecorder.java:106)
+	at io.quarkus.deployment.steps.LifecycleEventsBuildStep$startupEvent1144526294.deploy_0(Unknown Source)
+	at io.quarkus.deployment.steps.LifecycleEventsBuildStep$startupEvent1144526294.deploy(Unknown Source)
+	at io.quarkus.runner.ApplicationImpl.doStart(Unknown Source)
+	at io.quarkus.runtime.Application.start(Application.java:101)
+	at io.quarkus.runtime.ApplicationLifecycleManager.run(ApplicationLifecycleManager.java:111)
+	at io.quarkus.runtime.Quarkus.run(Quarkus.java:71)
+	at org.keycloak.quarkus.runtime.KeycloakMain.start(KeycloakMain.java:139)
+	at org.keycloak.quarkus.runtime.cli.command.AbstractStartCommand.run(AbstractStartCommand.java:42)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2026)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2461)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2453)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2415)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2273)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2417)
+	at picocli.CommandLine.execute(CommandLine.java:2170)
+	at org.keycloak.quarkus.runtime.cli.Picocli.parseAndRun(Picocli.java:140)
+	at org.keycloak.quarkus.runtime.KeycloakMain.main(KeycloakMain.java:99)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.quarkus.bootstrap.runner.QuarkusEntryPoint.doRun(QuarkusEntryPoint.java:62)
+	at io.quarkus.bootstrap.runner.QuarkusEntryPoint.main(QuarkusEntryPoint.java:33)
+2024-08-09 12:04:30.272535+05:30 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: Writing to sun.nio.ch.FileChannelImpl@248aac13 failed; length 8192 at 94208 [2.2.224/2]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.FileStore.storeBuffer(FileStore.java:1527)
+	at org.h2.mvstore.FileStore.lambda$serializeAndStore$3(FileStore.java:1432)
+	at org.h2.mvstore.FileStore.submitOrRun(FileStore.java:1401)
+	at org.h2.mvstore.FileStore.serializeAndStore(FileStore.java:1432)
+	at org.h2.mvstore.FileStore.lambda$storeIt$2(FileStore.java:1376)
+	at org.h2.mvstore.FileStore.submitOrRun(FileStore.java:1401)
+	at org.h2.mvstore.FileStore.storeIt(FileStore.java:1375)
+	at org.h2.mvstore.MVStore.storeNow(MVStore.java:843)
+	at org.h2.mvstore.MVStore.store(MVStore.java:808)
+	at org.h2.mvstore.MVStore.commit(MVStore.java:778)
+	at org.h2.mvstore.MVStore.commit(MVStore.java:770)
+	at org.h2.mvstore.tx.TransactionStore.close(TransactionStore.java:365)
+	at org.h2.mvstore.db.Store.close(Store.java:349)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1293)
+	at org.h2.engine.Database.<init>(Database.java:401)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:225)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:545)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:526)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: Writing to sun.nio.ch.FileChannelImpl@248aac13 failed; length 8192 at 94208 [2.2.224/2]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 34 more
+Caused by: org.h2.mvstore.MVStoreException: Writing to sun.nio.ch.FileChannelImpl@248aac13 failed; length 8192 at 94208 [2.2.224/2]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.DataUtils.writeFully(DataUtils.java:478)
+	at org.h2.mvstore.SingleFileStore.writeFully(SingleFileStore.java:67)
+	at org.h2.mvstore.SingleFileStore.writeFully(SingleFileStore.java:28)
+	at org.h2.mvstore.RandomAccessStore.writeChunk(RandomAccessStore.java:366)
+	at org.h2.mvstore.RandomAccessStore.writeChunk(RandomAccessStore.java:28)
+	at org.h2.mvstore.FileStore.storeBuffer(FileStore.java:1524)
+	... 28 more
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.FileChannelImpl.ensureOpen(FileChannelImpl.java:159)
+	at java.base/sun.nio.ch.FileChannelImpl.write(FileChannelImpl.java:854)
+	at org.h2.mvstore.DataUtils.writeFully(DataUtils.java:474)
+	... 33 more
+2024-08-12 12:16:23.144456+05:30 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: Could not open file /home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db [2.2.224/1]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:225)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:545)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:526)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: Could not open file /home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db [2.2.224/1]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 23 more
+Caused by: org.h2.mvstore.MVStoreException: Could not open file /home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db [2.2.224/1]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:126)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 17 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.FileChannelImpl.endBlocking(FileChannelImpl.java:171)
+	at java.base/sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:395)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:120)
+	... 19 more
+2024-08-12 12:16:27.802676+05:30 database: opening /home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb
+org.h2.message.DbException: IO Exception: "/home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db" [90028-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:142)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:225)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:545)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:526)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "/home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db" [90028-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 18 more
+Caused by: org.h2.mvstore.MVStoreException: Could not open file /home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db [2.2.224/1]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:126)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	... 15 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.FileChannelImpl.endBlocking(FileChannelImpl.java:171)
+	at java.base/sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:395)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:120)
+	... 19 more
+2024-08-13 18:17:52.066792+05:30 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: Could not open file /home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db [2.2.224/1]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:225)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:545)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:526)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: Could not open file /home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db [2.2.224/1]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 23 more
+Caused by: org.h2.mvstore.MVStoreException: Could not open file /home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db [2.2.224/1]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:126)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 17 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.FileChannelImpl.endBlocking(FileChannelImpl.java:171)
+	at java.base/sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:395)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:120)
+	... 19 more
+2024-08-13 18:17:52.396361+05:30 database: opening /home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb
+org.h2.message.DbException: IO Exception: "/home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db" [90028-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:142)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:225)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:545)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:526)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "/home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db" [90028-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 18 more
+Caused by: org.h2.mvstore.MVStoreException: Could not open file /home/eight848-digital/keycloak-24.0.3/keycloak-999.0.0-SNAPSHOT/data/h2/keycloakdb.mv.db [2.2.224/1]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:126)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	... 15 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.FileChannelImpl.endBlocking(FileChannelImpl.java:171)
+	at java.base/sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:395)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:120)
+	... 19 more
